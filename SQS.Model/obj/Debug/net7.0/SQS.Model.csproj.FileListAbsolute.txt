@@ -1,0 +1,12 @@
+D:\GitHub\Projetos\poc-sqs\SQS.Model\bin\Debug\net7.0\SQS.Model.deps.json
+D:\GitHub\Projetos\poc-sqs\SQS.Model\bin\Debug\net7.0\SQS.Model.dll
+D:\GitHub\Projetos\poc-sqs\SQS.Model\bin\Debug\net7.0\SQS.Model.pdb
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.csproj.AssemblyReference.cache
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.AssemblyInfoInputs.cache
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.AssemblyInfo.cs
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.csproj.CoreCompileInputs.cache
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.dll
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\refint\SQS.Model.dll
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\SQS.Model.pdb
+D:\GitHub\Projetos\poc-sqs\SQS.Model\obj\Debug\net7.0\ref\SQS.Model.dll

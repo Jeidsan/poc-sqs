@@ -1,0 +1,3 @@
+{
+    "dotnet.defaultSolution": "SQS.Producer/SQS.Producer.sln"
+}
