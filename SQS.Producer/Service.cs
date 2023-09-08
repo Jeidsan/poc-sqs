@@ -14,20 +14,11 @@ namespace SQS.Producer
             _configuration = configuration;
         }
 
-        public async Task<string> SendMessage(Pessoa pessoa)
+        public async Task<string> SendMessage(Notification notification)
         {
-            var message = new Message()
-            {
-                Header = new MessageHeader()
-                {
-                    Event = Event.CREATED,
-                    DateTime = DateTime.UtcNow.ToString()
-                },
-                Data = new MessageData()
-                {
-                    Pessoa = pessoa
-                }
-            };
+            var id = Guid.NewGuid().ToString();
+            notification.MessageId = id;
+            notification.MessageAttributes.Id.Value = id;
 
             var sqsUrl = _configuration.GetSection("SQS").GetSection("Url").Value;
             var accessKey = _configuration.GetSection("SQS").GetSection("AccessKey").Value;
@@ -35,7 +26,7 @@ namespace SQS.Producer
 
             var credentials = new BasicAWSCredentials(accessKey, secretKey);
             var client = new AmazonSQSClient(credentials, Amazon.RegionEndpoint.USWest2);
-            var response = await client.SendMessageAsync(sqsUrl, JsonSerializer.Serialize(message));            
+            var response = await client.SendMessageAsync(sqsUrl, JsonSerializer.Serialize(notification));
 
             return $"{response.HttpStatusCode} - {response.MessageId}";
         }

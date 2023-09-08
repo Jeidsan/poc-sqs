@@ -1,0 +1,44 @@
+{
+    "Type": "Notification",
+    "MessageId": "XXXXX-XXXX-XXX-XXXXX-XXXXXXX",
+    "TopicArn": "XX-XXXX-1:000000000000:XXX-XXX-XXX-XXXXX",
+"Message": "{\"header\": {\"version\": \"1.0.0.0\",\"customerId\": \"sensedia\",\"environmentId\": \"sandbox\",\"consentType\": \"payment\",\"createdDateTime\": 1656094963.566004000,\"event\": \"CREATED\"},\"data\": {\"paymentConsent\": {\"id\": \"62cc30c107934207a83c27e8\",\"consentId\": \"urn:sensediabank:3cd6bf5f-a59d-451a-abb5-2a3eeb45ccd9\",\"organisationId\": \"1eb7e8de-2a06-46d7-888d-b44e82c398cd\",\"clientId\": \"76acdb1f-a4b4-4dc9-a7e1-ac2d622d3e2c\",\"creationDateTime\": \"2022-07-11T14:16:31Z\",\"expirationDateTime\": \"2022-07-11T14:21:31Z\",\"statusUpdateDateTime\": \"2022-07-11T14:16:31Z\",\"status\": \"AWAITING_AUTHORISATION\",\"loggedUser\": {\"document\": {\"identification\": \"99999999999\",\"rel\": \"CPF\"}},\"businessEntity\": null,\"creditor\": {\"personType\": \"PESSOA_NATURAL\",\"cpfCnpj\": \"99999999999\",\"name\": \"DUMMY USER\"},\"payment\": {\"type\": \"PIX\",\"date\": \"2022-07-11\",\"currency\": \"BRL\",\"amount\": \"1.12\",\"ibgeTownCode\": \"1234567\",\"details\": {\"localInstrument\": \"DICT\",\"proxy\": \"+5561999999999\",\"creditorAccount\": {\"ispb\": \"99999008\",\"issuer\": \"1111\",\"number\": \"111111\",\"accountType\": \"CACC\"}}},\"debtorAccount\": {\"ispb\": \"12345678\",\"issuer\": \"0049\",\"number\": \"60075230\",\"accountType\": \"CACC\"},\"revocation\": null}},\"metadatas\": {}}",
+    "Timestamp": "XXX-09-XXXX:48:54.800Z",
+    "SignatureVersion": "X",
+    "Signature": "EXAMPLEpH+..",
+    "SigningCertURL": "https://sns.XXX-XXXX-XXXX.XXXXXX.com/SimpleNotificationService-0000000000000000000000.pem",
+    "MessageAttributes": {
+        "event_type": {
+            "Type": "String",
+            "Value": "XXXX-consents-XXX"
+        },
+        "consent_namespace": {
+            "Type": "String",
+            "Value": "sensediabank"
+        },
+        "environment_id": {
+            "Type": "String",
+            "Value": "XXX"
+        },
+        "id": {
+            "Type": "String",
+            "Value": "XXXX-XXX-XXX-5ff2-XXX"
+        },
+        "customer_id": {
+            "Type": "String",
+            "Value": "XXXXXXXXXXX"
+        },
+        "contentType": {
+            "Type": "String",
+            "Value": "application/json"
+        },
+        "consent_type": {
+            "Type": "String",
+            "Value": "payment"
+        },
+        "timestamp": {
+            "Type": "Number.java.lang.Long",
+            "Value": "XXXXXXXX"
+        }
+    }
+}

@@ -7,10 +7,12 @@ namespace SQS.Consumer
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
+        private readonly IConfiguration _configuration;
 
-        public Worker(ILogger<Worker> logger)
+        public Worker(ILogger<Worker> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -19,10 +21,10 @@ namespace SQS.Consumer
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
-                var accessKey = "AKIA6NXGTF4VFN672R2R";
-                var secretKey = "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";
-                var sqsUrl = "https://sqs.us-west-2.amazonaws.com/991547305770/poc-sqs";
-
+                var sqsUrl = _configuration.GetSection("SQS").GetSection("Url").Value;
+                var accessKey = _configuration.GetSection("SQS").GetSection("AccessKey").Value;
+                var secretKey = _configuration.GetSection("SQS").GetSection("SecretKey").Value;
+                
                 var credentials = new BasicAWSCredentials(accessKey, secretKey);
                 var client = new AmazonSQSClient(credentials, Amazon.RegionEndpoint.USWest2);
                 var response = await client.ReceiveMessageAsync(sqsUrl);

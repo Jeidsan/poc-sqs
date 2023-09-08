@@ -7,9 +7,9 @@ builder.Services.AddTransient<Service>();
 
 var app = builder.Build();
 
-app.MapPost("/", async ([FromServices] Service service, [FromBody] Pessoa pessoa) =>
+app.MapPost("/", async ([FromServices] Service service, [FromBody] Notification notification) =>
 {
-    return await service.SendMessage(pessoa);
+    return await service.SendMessage(notification);
 });
 
 app.Run();

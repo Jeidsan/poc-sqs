@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace SQS.Model
 {
     public class MessageHeader
     {
-        public Event Event { get; set; }
-        public string DateTime { get; set; }
+        public string Version { get; set; }
+        public string CustomerId { get; set; }
+        public string EnvironmentId { get; set; }
+        public string ConsentType { get; set; }        
+        public string CreatedDateTime { get; set; }
+        public string Event { get; set; }
     }
 }
